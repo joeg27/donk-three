@@ -1,3 +1,7 @@
+:root {
+    font-family: monospace;
+}
+
 *
 {
     margin: 0;
@@ -7,6 +11,7 @@
 html,
 body
 {
+    height: 100%;
     overflow: hidden;
 }
 
@@ -15,5 +20,31 @@ body
     position: fixed;
     top: 0;
     left: 0;
+    right: 0;
+    bottom: 0;
     outline: none;
+    z-index: 0; /* behind the header */
+    display: block;
+}
+
+/* Overlay header on top of the canvas */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    padding: 12px 16px;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.35);
+    backdrop-filter: blur(6px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
